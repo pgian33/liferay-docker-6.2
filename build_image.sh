@@ -2,10 +2,6 @@
 
 function check_utils {
 
-	#
-	# https://stackoverflow.com/a/677212
-	#
-
 	for util in "${@}"
 	do
 		command -v ${util} >/dev/null 2>&1 || { echo >&2 "The utility ${util} is not installed."; exit 1; }
@@ -71,7 +67,7 @@ function main {
 	#
 
 	local current_date=$(date)
-	echo "Current_date" ${current_date}
+	echo "current_date" ${current_date}
 
 	local timestamp=${current_date}
 
@@ -272,7 +268,6 @@ function main {
 	#
 	# Push Docker image.
 	#
-	
 
 	#for docker_image_tag in "${docker_image_tags[@]}"
 	#do
