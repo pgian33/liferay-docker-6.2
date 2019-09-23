@@ -269,10 +269,10 @@ function main {
 	# Push Docker image.
 	#
 
-	#for docker_image_tag in "${docker_image_tags[@]}"
-	#do
-	#	docker push ${docker_image_tag}
-	#done
+	for docker_image_tag in "${docker_image_tags[@]}"
+	do
+		docker push replydocker/liferay-6.2.5-ga6-ce:${docker_image_tag}
+	done
 
 	#
 	# Clean up temporary directory.
