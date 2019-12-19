@@ -11,10 +11,7 @@ RUN adduser -D -h /home/liferay liferay && addgroup liferay liferay
 
 COPY --chown=liferay:liferay home/.bashrc /home/liferay/
 COPY --chown=liferay:liferay liferay /opt/liferay
-
-COPY --chown=liferay:liferay ./mysql-connector-java-5.1.48.jar /opt/liferay/tomcat-7.0.62/lib/ext/
-COPY --chown=liferay:liferay ./portal-ext.properties /opt/liferay/
-COPY --chown=liferay:liferay ./ROOT.xml /opt/liferay/tomcat-7.0.62/conf/Catalina/localhost/
+COPY --chown=liferay:liferay deploy/birthday-list-portlet-1.0.0.0.war /opt/liferay/deploy/birthday-list-portlet-1.0.0.0.war
 
 ENTRYPOINT /usr/local/bin/liferay_entrypoint.sh
 
