@@ -11,7 +11,7 @@ RUN adduser -D -h /home/liferay liferay && addgroup liferay liferay
 
 COPY --chown=liferay:liferay home/.bashrc /home/liferay/
 COPY --chown=liferay:liferay liferay /opt/liferay
-COPY --chown=liferay:liferay deploy/birthday-list-portlet-1.0.0.0.war /opt/liferay/deploy/birthday-list-portlet-1.0.0.0.war
+COPY --chown=liferay:liferay deploy/birthday-list-portlet-1.0.0.0.war /opt/liferay/deploy/tetris-portlet-1.0.0.0.war
 
 ENTRYPOINT /usr/local/bin/liferay_entrypoint.sh
 
